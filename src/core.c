@@ -1,31 +1,3 @@
-/*##########################################################################
-
- THALES
-
- COPYRIGHT THALES
-
- NAE : 07-201
- Maximum level content in the matrix of transfer : 2
-
- ############################################################################*/
-/**
- @application   HLS
- @file          hls.c
- @author        GAGNAT Pascal
- @date          April 22 2013
-
- \brief
- Core functions of the HLS (initialization & main)
-
- Evolutions  :
- Author      :
- Date        :
- PCR         :
- Description :
- */
-
-/*#########################################################################################################################*/
-
 #include "core.h"
 #include <dlfcn.h>
 
