@@ -29,8 +29,6 @@
 #include "core.h"
 #include <dlfcn.h>
 
-#define __FILE_ID_FOR_LOG__            0
-
 int CORE__dynamic_linking_load_initialization(fptr** tptr_state, unsigned int *ptr_cur_state,
         state_machine_information_table st_info_table, void** tptr_dynamic_lib)
 {
@@ -137,10 +135,6 @@ int main()
     while (1)
         ;
 
-//	xmlInitParser();
-//	plc_config = (t_plc*) malloc(sizeof(t_plc));
-//	HARDWARE_DEFINITION__parsing(plc_config);
-
     ptr_name = (char*) malloc(50 * sizeof(char));
     snprintf(ptr_name, 25, "./state_scheduling.xml");
 
@@ -170,9 +164,6 @@ int main()
     {
         LOG__WRITE_CRIT("file %s empty or corrupted (2)\n", ptr_name);
 
-        free(st_info_table.st_info);
-        xmlFree(ptr_cur);
-        xmlFreeDoc(ptr_doc);
         free(ptr_name);
         return KO;
     }
